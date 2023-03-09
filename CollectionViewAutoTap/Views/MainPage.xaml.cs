@@ -1,4 +1,6 @@
-﻿namespace CollectionViewAutoTap.Views;
+﻿using CollectionViewAutoTap.ViewModels;
+
+namespace CollectionViewAutoTap.Views;
 
 public partial class MainPage : ContentPage
 {
@@ -7,7 +9,7 @@ public partial class MainPage : ContentPage
 	public MainPage()
 	{
 		InitializeComponent();
-		var vm = new MainPage();
+		var vm = new MainViewModel();
 		this.BindingContext = vm;
 	}
 
