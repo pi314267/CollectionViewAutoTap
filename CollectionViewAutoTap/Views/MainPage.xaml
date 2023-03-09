@@ -26,7 +26,7 @@
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
-        <Button Text="I Want to click id 3 by this button" Command="{Binding ClickCommand}"/>
+        <Button Grid.Row="2" Text="I Want to click id 3 by this button" Command="{Binding ClickCommand}"/>
 
 
     </Grid>

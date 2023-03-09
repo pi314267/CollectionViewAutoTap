@@ -39,7 +39,7 @@ namespace CollectionViewAutoTap.ViewModels
 
             //방법1 : SelectedItem을 넣어 본다.(안됨)
             //Select Item을 잡아 봤으나, 클릭되지 않음
-            SelectMyModel = new MyModel { Id = 3, Name = "Test3" };
+            //SelectMyModel = new MyModel { Id = 3, Name = "Test3" };
 
 
             //방법2 : MyModel에 IsSelect 부분을 넣고 Apprence가 되는 이벤트에 함수를 넣어 Frame에 BackGroundColor를 넣는다?
@@ -49,6 +49,14 @@ namespace CollectionViewAutoTap.ViewModels
             //https://stackoverflow.com/questions/75316643/make-focus-go-to-next-entry-in-a-collection-view
             //시도 필요
 
+            //방법4 : 오픈카톡!에서 제안한 방법. (동작완료)
+            //SelectMyModel = MyModels.Skip(3).FirstOrDefault();
+
+            SelectMyModel = MyModels.Where<MyModel>(e => e.Id == 3).ToList().FirstOrDefault();
+
+            //해결되었습니다!!!
+            
+            
         }
     }
 }
